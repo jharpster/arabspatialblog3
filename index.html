@@ -3,122 +3,138 @@ layout: feed
 section: blog
 ---
 
-<div class='blogContainer clearfix'>
-
-  {% for item in site.categories.blog limit:8 %}
-        {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
-        {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
+<div class="postsContainer clearfix whiteBackground">
+    {% for item in site.categories.blog limit:1000 %}
+    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
+    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
 
     {% if item.language == 'arabic' %}
-        <div id="{{item.title}}" class="article clearfix arabic hideblog">
 
-            <!-- arabic   -->
-
-                                {% if item.splash or item.youtube_url %}
-
-                                {% if item.youtube_url %}
-                                {% capture youtubeurl %}{{item.youtube_url}}{% endcapture %}
-                                <div class="video-wrapper">
-                                    <div class="youtubeThumbnail blogClickable" id="{{ item.title | replace: ' ', '_' }}" title="{{ item.title }}">
-                                        <img width="100%" src='http://img.youtube.com/vi/{{youtubeurl}}/hqdefault.jpg' alt='' />
-                                        <i class="fa fa-play iconPlay"></i>
-                                    </div>
-                                </div>
-                                {% endif %}
-
-                                {% if item.splash %}
-                                {% if item.splash contains 'http' %}
-                                {% capture url %}{{item.splash}}{% endcapture %}
-                                {% else %}
-                                {% capture url %}{{site.baseurl}}{{item.splash}}/{% endcapture %}
-                                {% endif %}
-
-                                <div class='splash blogClickable' id="{{ item.title | replace: ' ', '_' }}" title="{{ item.title }}">
-                                    <img width="100%" src='{{url}}' alt='' />
-                                </div>
-                                {% endif %}
-
-                                {% else %}
-                                <div class='splash blogClickable' id="{{ item.title | replace: ' ', '_' }}" title="{{ item.title }}">
-
-                                    <img width="100%" src='{{site.baseurl}}/img/IFPRI.png' alt='' />
-                                    </a>
-                                </div>
-                                {% endif %}
-
-                           <div class="textContainer col-sm-12">
-
-
-                               <div class="entryTitle blogClickable" style="text-align:right;" title="{{ item.title }}"><a id="{{ item.title | replace: ' ', '_' }}" class='itemTitle' title="{{ item.title }}">{{item.title}}</a></div>
-                               <div class='date'>
-                                   <div class="dateText" style="text-align:right;">{{item.date | date:"%B %d, %Y"}}</div>
-                                   {% if item.author %}
-                                   <div class="dateText" style="text-align:right;"> إعداد: <span>{{ item.author }}</span>
-                                   </div>
-                                   {% endif %}
-                               </div>
-                               {% if item.content %}
-                               <div class="summeryText" style="text-align:right;">{{ item.content | strip_html | truncatewords: 30 }}</div>
-                               {% endif %}
-
-                           </div>
-            </div>
-            {% else %}
-
-    <div id="{{item.title}}" class="article clearfix english showblog">
-
-        <!-- arabic   -->
+    <div id="{{item.title}}" class="articleblog clearfix arabic hideblog">
 
         {% if item.splash or item.youtube_url %}
 
         {% if item.youtube_url %}
         {% capture youtubeurl %}{{item.youtube_url}}{% endcapture %}
         <div class="video-wrapper">
-            <div class="youtubeThumbnail blogClickable" id="{{ item.title | replace: ' ', '_' }}" title="{{ item.title }}">
+            <a href='{{site.baseurl}}{{item.url}}'><div class="youtubeThumbnail">
                 <img width="100%" src='http://img.youtube.com/vi/{{youtubeurl}}/hqdefault.jpg' alt='' />
                 <i class="fa fa-play iconPlay"></i>
-            </div>
+            </div></a>
         </div>
         {% endif %}
 
-        {% if item.splash %}
+        {% if item.splash && item.youtube %}
         {% if item.splash contains 'http' %}
         {% capture url %}{{item.splash}}{% endcapture %}
         {% else %}
         {% capture url %}{{site.baseurl}}{{item.splash}}/{% endcapture %}
         {% endif %}
 
-        <div class='splash blogClickable' id="{{ item.title | replace: ' ', '_' }}" title="{{ item.title }}">
-            <img width="100%" src='{{url}}' alt='' />
+        <div class='splash' href='{{site.baseurl}}{{item.url}}'>
+            <a href='{{site.baseurl}}{{item.url}}'>
+                <img width="100%" src='{{url}}' alt='' />
+            </a>
         </div>
         {% endif %}
 
         {% else %}
-        <div class='splash blogClickable' id="{{ item.title | replace: ' ', '_' }}" title="{{ item.title }}">
-
-            <img width="100%" src='{{site.baseurl}}/img/IFPRI.png' alt='' />
+        <div class='splash' href='{{site.baseurl}}{{item.url}}'>
+            <a href='{{site.baseurl}}{{item.url}}'>
+                <img width="100%" src='{{site.baseurl}}/img/IFPRI.png' alt='' />
             </a>
         </div>
         {% endif %}
 
         <div class="textContainer col-sm-12">
 
+            <!-- Arabic Content   -->
+            <div class="entryTitle blogClickable" style="text-align:right;" title="{{ item.title }}"><a id="{{ item.title | replace: ' ', '_' }}" class='itemTitle' title="{{ item.title }}" href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a>
+            </div>
 
-            <div class="entryTitle blogClickable" title="{{ item.title }}"><a id="{{ item.title | replace: ' ', '_' }}" class='itemTitle' title="{{ item.title }}">{{item.title}}</a></div>
+            <div class='date'>
+                <div class="dateText" style="text-align:right;">
+                    {{item.date | date:"%B %d, %Y"}}
+                </div>
+
+                <div class="dateText" style="text-align:right;"> إعداد: <span>{{ item.author }}</span></div>
+            </div>
+
+            {% if item.content %}
+            <div class="summeryText" style="text-align:right;">{{ item.content | split: '<!-- more -->' | first }}</div>
+            {% endif %}
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+    {% else %}
+
+    <div id="{{item.title}}" class="articleblog clearfix english showblog">
+
+        {% if item.splash or item.youtube_url %}
+
+        {% if item.youtube_url %}
+        {% capture youtubeurl %}{{item.youtube_url}}{% endcapture %}
+        <div class="video-wrapper">
+            <a href='{{site.baseurl}}{{item.url}}'><div class="youtubeThumbnail">
+                <img width="100%" src='http://img.youtube.com/vi/{{youtubeurl}}/hqdefault.jpg' alt='' />
+                <i class="fa fa-play iconPlay"></i>
+            </div></a>
+        </div>
+        {% endif %}
+
+        {% if item.splash && item.youtube %}
+        {% if item.splash contains 'http' %}
+        {% capture url %}{{item.splash}}{% endcapture %}
+        {% else %}
+        {% capture url %}{{site.baseurl}}{{item.splash}}/{% endcapture %}
+        {% endif %}
+
+        <div class='splash' href='{{site.baseurl}}{{item.url}}'>
+            <a href='{{site.baseurl}}{{item.url}}'>
+                <img width="100%" src='{{url}}' alt='' />
+            </a>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div class='splash' href='{{site.baseurl}}{{item.url}}'>
+            <a href='{{site.baseurl}}{{item.url}}'>
+                <img width="100%" src='{{site.baseurl}}/img/IFPRI.png' alt='' />
+            </a>
+        </div>
+        {% endif %}
+
+
+        <div class="textContainer col-sm-12">
+
+            <div class="entryTitle blogClickable"><a id="{{ item.title | replace: ' ', '_' }}" title="{{ item.title }}" class='itemTitle' href='{{site.baseurl}}{{item.url}}'>{{item.title }}</a></div>
             <div class='date'>
                 <div class="dateText">{{item.date | date:"%B %d, %Y"}}</div>
                 {% if item.author %}
-                <div class="dateText" >By: <span>{{ item.author }}</span>
-                </div>
+                <div class="dateText" >By: <span>{{ item.author }}</span></div>
                 {% endif %}
             </div>
-            {% if item.content %}
-            <div class="summeryText">{{ item.content | strip_html | truncatewords: 30 }}</div>
+
+            {% if item.content contains '<!-- more -->' %}
+            <div class="summeryText" >{{ item.content | split: '<!-- more -->' | first }}</div>
+            <!--<div class="summeryText" >{{ item.excerpt | strip_html}}...</div>-->
+            {% else %}
+            <div class="summeryText" >{{ item.content }}</div>
             {% endif %}
 
         </div>
     </div>
-   {% endif %}
-  {% endfor %}
 
+
+    {% endif %}
+
+
+    {% endfor %}
 </div>
