@@ -1,0 +1,56 @@
+<div id="sharingContainer">
+    <!-- <button onclick="copyText()">share link</button> -->
+      <div class="individualShare" id='{{page.title}}' onclick="copyText()">
+
+        Share URL
+      </div>
+
+      {% capture now %}{{ site.time | date: '%x' }}{% endcapture %}
+
+      {% assign delimiter = ' - ' %}
+      {% capture verifydate %}{{ item.eventdate | date: '%x' }}{% endcapture %}
+      {% capture verifydate %}{{ verifydate | replace: delimiter, ' ' }}{% endcapture %}
+      {% capture myFirstWord %}{{ verifydate | truncatewords: 1 | remove: '...' }}{% endcapture %}
+
+      {% if myFirstWord < now %}
+      
+      <!-- <a href="https://twitter.com/share" class="twitter-share-button" url="{{site.baseurl}}/{{page.url}}?redirect=1" data-count="none" target="_blank"></a> -->
+
+      <div id="custom-tweet-button" class="tweetShare">
+        <a href="https://twitter.com/share?url={{site.baseurl}}{{page.url}}?eventpastredirect=1&text={{site.rooturl}}{{page.url}}&via=IFPRI" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
+      </div>
+
+      <div class="fb-share-button" data-href="{{site.baseurl}}/{{page.url}}?eventpastredirect=1" data-type="button" style="margin-top: 1px;"></div>
+
+      {% else %}
+
+      <div id="custom-tweet-button" class="tweetShare">
+        <a href="https://twitter.com/share?url={{site.baseurl}}{{page.url}}?eventredirect=1&text={{site.rooturl}}{{page.url}}&via=IFPRI" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
+      </div>
+
+      <div class="fb-share-button" data-href="{{site.baseurl}}/{{page.url}}" data-type="button" style="margin-top: 1px;"></div>
+
+
+      {% endif %}
+
+      <!-- <div class="g-plus" data-action="share" data-annotation="none"></div> -->
+      <a href=""><div class="printing" title="page.title">
+      <i class="fa fa-print"></i> Print
+      </div></a>
+      
+  
+      
+
+      <div class="panel panel-default">
+        
+        <div id="panel-body" class="panel-body">{{site.rooturl}}{{page.url}}</div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script>
+    $('.printing').click(function(){
+        window.print();
+    })
+    </script>

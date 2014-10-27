@@ -1,0 +1,32 @@
+---
+layout: blogpost
+
+---
+
+<!--<div class="blog-header grayBackground clearfix">-->
+  <!--<div class="blog-title" style="font-size:30px;color:#3d3d3d;">Blog</div>-->
+<!--</div>-->
+
+<div class="seeBlogEntries" style="margin-top:20px;margin-left:10px;"><a href="{{site.baseurl}}/fullsite">< All blog entries</a></div>
+
+<div class="month" style="margin-left:10px;"><i class="fa fa-calendar"></i>   Archive: {{ page.period["month"] }} - {{page.period["year"]}}</div>
+<!-- <h2> Archive: {{ page.period["month"] }} - {{page.period["year"]}} </h2><br> -->
+<div>
+{% for post in page.period_posts %}
+<!-- <div> 
+    <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a><br>
+    <span class="entry-meta">Published: {{ post.date | date: "%B %d, %Y" }}</span>
+</div> -->
+
+
+	<div id="{{post.title}}" class="articleTag clearfix noBorderBottom">
+        <div class='date'>
+          <span class="dateText">{{post.date | date:"%B %d, %Y"}} &#8226; {{post.category}} post</span>
+        </div>
+          
+        <a class='item' href='{{site.baseurl}}{{post.url}}'>{{post.title}}</a>
+        <div class="summeryText" >{{ post.summary }}</div>
+    </div>
+
+{% endfor %}
+</div>

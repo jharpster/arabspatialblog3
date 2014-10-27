@@ -1,0 +1,161 @@
+baseurl: /arabspatialblog
+rooturl: http://50.62.145.200/arabspatialblog
+permalink: pretty
+markdown: kramdown
+encoding: UTF-8
+highlighter: rouge
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://50.62.145.200/arabspatialblog/'
+  relativeLinks: 'http://arabspatial.org/arabspatialblog/links.jsonp'
+  media: 'media'
+  metadata:
+    _posts/events:
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: true
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "header"
+        field:
+          element: "text"
+          label: "Event summary"
+          value: ""
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "event"
+      - name: "eventdate"
+        field:
+          element: "text"
+          label: "Event Dates (mm/dd/yyyy - mm/dd/yyyy)"
+          placeholder: "mm/dd/yyyy - mm/dd/yyyy"
+      - name: "eventplace"
+        field:
+          element: "text"
+          label: "Event place/building"
+          placeholder: ""
+      - name: "location"
+        field:
+          element: "multiselect"
+          label: "Event location"
+          alterable: "true"
+          placeholder: "Choose location"
+          options:
+            - name: "Washington, DC"
+              value: "Washington, DC"
+            - name: "Seattle, WA"
+              value: "Seattle, WA"
+      - name: "agenda"
+        field:
+          element: "text"
+          label: "paste agenda doc url"
+          value: ""
+      - name: "powerpoint"
+        field:
+          element: "text"
+          label: "paste powerpoint url"
+          value: ""
+    _posts/blog:
+      - name: "category"
+        field:
+          element: "select"
+          label: "Type of Post"
+          placeholder: "Blog"
+          options:
+            - name: "Blog"
+              value: "blog"
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: true
+      - name: "language"
+        field:
+          element: "select"
+          label: "Content Language"
+          placeholder: "English or Arabic"
+          options:
+            - name: "English"
+              value: "english"
+            - name: "Arabic"
+              value: "arabic"
+      - name: "comments"
+        field:
+          label: "Allow Comments"
+          element: "checkbox"
+          value: true
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "splash"
+        field:
+          element: "text"
+          label: "Image URL"
+          value: ""
+      - name: "youtube_url"
+        field:
+          element: "text"
+          label: "Youtube Video ID"
+          value: ""
+          placeholder: "1234456789"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          alterable: "true"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Work"
+              value: "work"
+            - name: "Services"
+              value: "services"
+            - name: "About Us"
+              value: "about us"
+            - name: "Careers"
+              value: "careers"
+      - name: "author"
+        field:
+          element: "multiselect"
+          label: "Add Author"
+          alterable: "true"
+          placeholder: "Choose Author"
+          options:
+            - name: "IFPRI"
+              value: "IFPRI"
+            - name: "Perrihan Al-Riffai"
+              value: "Perrihan Al-Riffai (IFPRI)"
+            - name: "Yifei Liu"
+              value: "Yifei Liu (IFPRI)"
+            - name: "Olivier Ecker"
+              value: "Olivier Ecker (IFPRI)"
+    _posts/static:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "page"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""

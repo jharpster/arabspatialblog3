@@ -1,0 +1,164 @@
+---
+title: ''
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Arab Spatial News</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{site.baseurl}}/bootstrap.css" rel="stylesheet">
+
+    <link href="{{site.baseurl}}/fontstyles.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{{site.baseurl}}/fullsitestyle.css" rel="stylesheet">
+
+    <link href="{{site.baseurl}}/myFeedStyle.css" rel="stylesheet">
+
+    <link href="{{site.baseurl}}/animate.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!--Gotham-Book fonts-->
+    <link href="{{site.baseurl}}/fonts/GothaBolIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaBoo.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaBooIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaLig.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaLigIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaMedIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaMed.css" rel="stylesheet" type="text/css" />
+
+    
+
+  <body>
+
+      <div class="bodyContainer clearfix grayBackground">
+        <div class="feedContainer clearfix grayBackground">
+            <div class="blogFeed clearfix">
+              <div class="blog-header clearfix">
+                <div class="blog-title floatleft">Past events</div>
+                <div class="eventButtonContainer clearfix">
+                  <a href="{{site.baseurl}}/eventsite" ><button id="upcoming" type="button" class="btn btn-default btn-xs" >Upcoming</button></a>
+                  <a href="{{site.baseurl}}/pasteventsite"><button id="past" type="button" class="btn btn-default btn-xs buttonActive" >Past</button></a>
+                </div>
+              </div>
+
+    <div class="postsContainer clearfix whiteBackground" style="height:710px;max-height:710px;overflow:auto;">
+
+
+  {% capture now %}{{ site.time | date: '%x' }}{% endcapture %}
+
+  <!-- <div>{{now}}</div> -->
+
+                  <!-- /.blog-sidebar -->
+  {% for item in site.categories.event limit:100 %}
+    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
+    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
+
+
+    {% assign delimiter = ' - ' %}
+      {% capture verifydate %}{{ item.eventdate | date: '%x' }}{% endcapture %}
+      {% capture verifydate %}{{ verifydate | replace: delimiter, ' ' }}{% endcapture %}
+      {% capture myFirstWord %}{{ verifydate | truncatewords: 1 | remove: '...' }}{% endcapture %}
+
+    <!-- <div>{{verifydate}}</div> -->
+
+    {% if myFirstWord < now %}
+    
+    
+
+    <div id="{{item.title}}" class="feedevent clearfix" >
+
+
+
+  <div class="feedeventdate">
+      <!-- <div class="eventmonth">{{item.eventdate}}</div> -->
+      
+      <!-- <div>{{myFirstWord}}</div> -->
+      <div class="feedeventday">{{item.eventdate}}</div>
+  </div>
+  <div class="eventtextContainer feedcol-sm-10">
+        <!-- <a class='item'>{{item.title}}</a>   -->
+        {% if item.title %}
+        <div class="entryTitle"><a title="{{ item.title }}" class='eventItemTitle eventClickable feedeventItemTitle' href='{{site.baseurl}}{{item.url}}'>{{item.title }}</a></div>
+        <div class='feedeventLocation'>
+          
+          {% if item.location %}
+            <div class="dateText" >Where: {{ item.location }}</div>
+          {% endif %}
+        </div>
+        <!-- <div class="summeryText" >{{ item.header}}</div> -->
+        {% endif %}
+        </div>
+
+       
+
+    </div>
+
+     {% endif %}
+
+    {% endfor %}
+
+
+    
+
+        </div><!-- /.blog-main -->
+
+        
+
+
+        </div><!-- /.blog-sidebar -->
+
+        <div class="sidePanel">
+              
+
+            </div>
+
+      </div><!-- /.row -->
+
+      <div id="google_translate_element2"></div>
+
+    </div><!-- /.container -->
+    </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element2');
+        }
+        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+    
+    <script>
+    $(".btn").on("click", function () {
+
+
+
+  });
+
+    $( ".btn" ).click(function() {
+      $( ".btn" ).removeClass( "buttonActive" );
+      $( this ).toggleClass( "buttonActive" );
+
+      console.log(this);
+
+
+    });
+
+  
+  </script>
+
+  </body>
+</html>

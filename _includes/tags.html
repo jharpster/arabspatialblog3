@@ -1,0 +1,12 @@
+<!--   <div class='col4 margin3 pad4'> -->
+    <div class="clearfix whiteBackground padding20 marginBottom10">
+    <div class="sidePanelTitle"><i class="fa fa-tags"></i>   Tags</div>
+      <span class="list-unstyled">
+
+            {% for tag in site.tags %}
+                <span><a href="{{site.baseurl}}/tags/{{ tag[0] }}">{{ tag[0] }}</a>, </span>
+            {% endfor %}
+
+      </span>
+    </div>
+<!--   </div> -->

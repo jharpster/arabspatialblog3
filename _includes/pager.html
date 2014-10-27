@@ -1,0 +1,7 @@
+<ul class="pager">
+  <li class="previous">{% if page.previous.url %} <a href="{{site.baseurl}}{{page.previous.url}}">&larr; Older</a></li>
+  {% endif %} 
+  {% if page.next.url %}
+  <li class="next"><a href="{{site.baseurl}}{{page.next.url}}">Newer &rarr;</a></li>
+  {% endif %}
+</ul>
