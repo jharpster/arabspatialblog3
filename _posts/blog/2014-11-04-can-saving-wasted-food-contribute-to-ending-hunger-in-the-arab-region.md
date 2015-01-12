@@ -6,7 +6,11 @@ category: blog
 language: english
 comments: true
 tags: 
-  - "hunger, food loss, food waste, Egypt, Food Bank "
+  - hunger
+  - food loss
+  - food waste
+  - Egypt
+  - Food Bank
 author: 
   - "Moez El Shohdi, Co-Founder & Chief Executive Officer - The Egyptian Food Bank"
 splash: "https://farm8.staticflickr.com/7568/15712410875_6d03a7ba80_m.jpg"
