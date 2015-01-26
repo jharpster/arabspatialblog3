@@ -2,10 +2,10 @@
 title: ''
 ---
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
@@ -19,16 +19,16 @@ title: ''
 
 
     <!-- Custom styles for this template -->
-    <link href="{{site.baseurl}}/css/fullsiteStyle.css" rel="stylesheet">
 
-    <!--<link href="{{site.baseurl}}/css/myFeedStyle.css" rel="stylesheet">-->
+      <link href="{{site.baseurl}}/css/landingPageStyle.css" rel="stylesheet">
+
+    <!--<link href="{{site.baseurl}}/fullsitestyle.css" rel="stylesheet">-->
+
+    <!--<link href="{{site.baseurl}}/myFeedStyle.css" rel="stylesheet">-->
 
     <link href="{{site.baseurl}}/css/animate.css" rel="stylesheet">
 
-    <link href="{{site.baseurl}}/css/ws_extras.css" rel="stylesheet" type="text/css" />
-    <!--<link href="{{site.baseurl}}/css/footer.css" rel="stylesheet" type="text/css" />-->
-
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!--Gotham-Book fonts-->
     <link href="{{site.baseurl}}/fonts/GothaBolIta.css" rel="stylesheet" type="text/css" />
@@ -39,125 +39,70 @@ title: ''
     <link href="{{site.baseurl}}/fonts/GothaMedIta.css" rel="stylesheet" type="text/css" />
     <link href="{{site.baseurl}}/fonts/GothaMed.css" rel="stylesheet" type="text/css" />
 
+    
 
+  <body>
 
-<body>
-
-<div class="bodyContainer clearfix grayBackground">
-    <div id="outerHeader" class="clearfix">
-        <div id="header"></div>
-    </div>
-    <div class="feedContainer clearfix grayBackground">
-        <div class="blog-header">
-            <div class="blog-title" style="font-size:30px;">ARAB FOOD SECURITY BLOG</div>
-        </div>
-        <div class="blogFeed clearfix">
+      <div class="bodyContainer clearfix">
+          <div class="blog-header">
+              <div class="blog-title english showblog" style="font-size:30px;color:#3d3d3d;">{{site.blogname}}</div>
+              <div class="blog-title arabic hideblog" style="font-size:38px;color:#3d3d3d;">{{site.blognameArabic}}</div>
+          </div>
+        <div class="feedContainer clearfix">
             <!--<button type="button" id="en" class="btn btn-default">english</button>-->
             <!--<button type="button" id="ara" class="btn btn-default">arabic</button>-->
-
-
-
-
-            {{content}}
-
-
-
-
-
+            <div class="blogFeed clearfix">
+              {{content}}
+            </div>
+            <div class="sidePanel">
+                <div class="eventTitleContainer">
+                    <h1 class="events-title">EVENTS</h1><span class="seeMore see-more-events">See more events ></span>
+                    <div class="eventFeed clearfix">
+                        {% include events_LP.html %}
+                    </div>
+                </div>
+                <div class="eventTitleContainer">
+                    <h1 class="events-title">PUBLICATIONS</h1><span class="seeMore see-more-publications">See more publications ></span>
+                    <div class="eventFeed clearfix">
+                        {% include publications_LP.html %}
+                    </div>
+                </div>
+                <div class="eventTitleContainer">
+                    <h1 class="events-title">NEWS</h1>
+                    <div class="eventFeed clearfix">
+                        {% include newsletters_LP.html %}
+                    </div>
+                </div>
+            </div>
         </div>
+      </div>
 
-        <div class="sidePanel">
 
 
-            {% include tags.html %}
-
-            {% include publications.html %}
-
-            {% include events.html %}
-
-            {% include newsletters.html %}
-
-            {% include archives.html %}
-
-        </div>
+    </div><!-- /.container -->
     </div>
 
-</div>
 
-<div id="outerFooter" class="clearfix">
-    <div id="footer"></div>
-</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+    
+    <script>
 
-</div><!-- /.container -->
-</div>
+        $('.btn').click(function(){
 
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
-<script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
-
-<script src="{{site.baseurl}}/ws_extras.js"></script>
-<!--<script src="{{site.baseurl}}/footer.js"></script>-->
-
-<script>
+            var lngCode = $(this).attr('id');
+            translate(lngCode)
 
 
-    $('.toggleCollapsable').click(function(){
+        });
 
-        var children = $( this ).children(".sidePanelTitle");
+//        var activeLngCode = "en";
 
-//        var childrenChild = $( children ).children(".arrow");
-
-//        console.log(childrenChild);
-
-
-        if ($( this ).children(".collapsable").hasClass('expand')){
-
-            $(".collapsable").removeClass('expand').addClass('collapse');
-
-
-            $('.arrow').removeClass('fa-caret-down').addClass('fa-caret-right');
-
-
-        }else{
-
-            $(".collapsable").removeClass('expand').addClass('collapse');
-            $( this ).children(".collapsable").toggleClass('expand collapse');
-
-            $('.arrow').removeClass('fa-caret-down').addClass('fa-caret-right');
-
-            $( children ).children("#arrow").toggleClass('fa-caret-right fa-caret-down');
-
-        }
-    });
-
-    function expandEvents(){
-
-
-        $('#events').removeClass('collapse').addClass('expand');
-
-
-    }
-
-    function expandPublications(){
-
-        $('#publications').removeClass('collapse').addClass('expand');
-
-
-    }
-
-    $('.btn').click(function(){
-
-        var lngCode = $(this).attr('id');
-        translate(lngCode)
-
-
-    });
-
-    function translate(lngCode) {
+        function translate(lngCode){
 
 //            if(lngCode != activeLngCode){
 //
@@ -166,107 +111,53 @@ title: ''
 //
 //            }
 
-        if (lngCode === "ara") {
+            if(lngCode === "ara"){
 
 
+                $(".arabic").removeClass('hideblog');
+                $(".arabic").addClass('showblog');
+
+                $(".english").removeClass('showblog');
+                $(".english").addClass('hideblog');
+
+                $(".summeryText").css('direction','rtl');
+                $(".dateText").css('direction','rtl');
+
+            }if (lngCode === "en"){
+
+                $(".english").removeClass('hideblog');
+                $(".english").addClass('showblog');
+
+                $(".arabic").removeClass('showblog');
+                $(".arabic").addClass('hideblog');
+
+                $(".summeryText").css('direction','ltr');
+                $(".dateText").css('direction','ltr');
+
+            }
+
+        }
+
+        if (window.location.hash === '#arabic') {
             $(".arabic").removeClass('hideblog');
             $(".arabic").addClass('showblog');
 
+            $(".summeryText").css('direction','rtl');
+
+            $(".dateText").css('direction','rtl');
+
             $(".english").removeClass('showblog');
             $(".english").addClass('hideblog');
+        }else{
+            $(".summeryText").css('direction','ltr');
 
-        }
-        if (lngCode === "en") {
-
-            $(".english").removeClass('hideblog');
-            $(".english").addClass('showblog');
-
-            $(".arabic").removeClass('showblog');
-            $(".arabic").addClass('hideblog');
-
+            $(".dateText").css('direction','ltr');
         }
 
-    }
 
 
-    $('.summeryText a').on('click', function(e) {
-        e.preventDefault();
-        console.log(this.href);
+  
+  </script>
 
-        window.open(this.href,'_blank');
-    });
-
-
-    if (window.location.hash === '#arabic') {
-        $(".arabic").removeClass('hideblog');
-        $(".arabic").addClass('showblog');
-
-        $(".english").removeClass('showblog');
-        $(".english").addClass('hideblog');
-    }
-
-
-    $( document ).ready(function() {
-
-        var Header = new WSHeader('header', HEADER_MOCK_OBJ, {
-            onLogoClick:function() {
-
-                var url = 'http://54.191.215.52/ArabSpatial/?id=MENA&s=lp';
-                window.open(url, "_self");
-            },
-            onMapClick:function() {
-
-                console.log("Clicked on Map");
-                var url = 'http://54.191.215.52/ArabSpatial/?id=MENA&s=map';
-                window.open(url, "_self");
-
-            },
-            onBlogClick:function() {
-
-                console.log("Clicked on Blog");
-
-            }
-        });
-
-
-        var Footer = new WSFooter('footer', FOOTER_MOCK_OBJ, {
-            onLang1Click:function() {
-
-                Header.translate('ara');
-                Footer.translate('ara');
-
-                translate('ara');
-
-            },
-            onLang2Click:function() {
-
-                Footer.translate('en');
-                Header.translate('en');
-
-                translate('en');
-
-            }
-        });
-
-
-        Footer.translate('en');
-        Header.translate('en');
-
-
-
-
-    });
-
-
-
-
-
-
-
-
-
-</script>
-
-</body>
+  </body>
 </html>
-

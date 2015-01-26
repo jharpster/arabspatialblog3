@@ -5,7 +5,7 @@ title: ''
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
@@ -46,14 +46,14 @@ title: ''
       <div class="bodyContainer clearfix grayBackground">
         <div class="feedContainer clearfix grayBackground">
             <div class="blog-header">
-                <div class="blog-title" style="font-size:30px;">ARAB FOOD SECURITY BLOG</div>
+                <div class="blog-title" style="font-size:30px;">{{site.blogname}}</div>
             </div>
             <div class="blogFeed clearfix">
 
 
     <div class="postsContainer clearfix whiteBackground" style="padding-bottom:20px;">
 
-    <div class="seeBlogEntries" style="margin-top:20px;margin-left:10px;"><a href="{{site.baseurl}}/">< All blog entries</a></div>
+    <div class="seeBlogEntries" style="margin-top:20px;margin-left:10px;"><a href="{{site.baseurl}}/fullsite">< All blog entries</a></div>
 
 
     <div class="month" style="margin-left:10px;"><i class="fa fa-tags"></i>  {% if page.url != '/index.html' %}| {{page.title}}{% endif %}</div>

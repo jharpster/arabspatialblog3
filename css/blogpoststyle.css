@@ -380,7 +380,7 @@ input[type=text], textarea {
 }
 
 .contentIndividualBlog{
-  float: left;
+  /*float: left;*/
 margin-top: 10px;
 display: inline-block;
 width: 100%;
@@ -388,16 +388,23 @@ width: 100%;
 }
 
 .contentIndividualBlog h2{
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .contentIndividualBlog p{
-  font-size: 14px;
+  font-size: 16px;
 }
+
+.contentIndividualBlog img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 #sharingContainer{
   margin-top: 10px;
-  float: left;
-  width: 100%;
+
+  width: 30%;
 }
 
 #custom-tweet-button{
@@ -828,27 +835,14 @@ margin-top: -24px;
     cursor: pointer;
 }
 
-#footer {
-    height:34px;
-    line-height: 34px;
+.panel{
+    width: 630px;
 }
 
-#outerHeader, #outerFooter {
-    background:#303030;
-    z-index:5 !important;
-}
-
-#header, #footer {
-    background:#303030;
-    z-index:5 !important;
-    height: 34px;
-    margin: 0 auto;
-    min-width: 1024px;
-}
-
-#header {
-    line-height:34px;
-    font-size:18px;
-    font-weight:400;
-
+.textwrap{
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;
 }

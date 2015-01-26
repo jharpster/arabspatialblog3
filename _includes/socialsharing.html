@@ -1,6 +1,13 @@
-<div id="sharingContainer">
+{% if page.language == 'english' %}
+<div id="sharingContainer" class="en">
+{% else %}
+    <div id="sharingContainer" style="float: right;">
+{% endif %}
+
+
+
     <!-- <button onclick="copyText()">share link</button> -->
-      <div class="individualShare" id='{{page.title}}' onclick="copyText()">
+      <div class="individualShare" id='{{page.id}}' onclick="copyText()">
 
         Share URL
       </div>
@@ -9,22 +16,27 @@
       <!-- <a href="https://twitter.com/share" class="twitter-share-button" url="{{site.baseurl}}/{{page.url}}?redirect=1" data-count="none" target="_blank"></a> -->
         <div class="socialcontainer clearfix">
       <div id="custom-tweet-button" class="tweetShare">
-        <a href="https://twitter.com/share?url={{site.baseurl}}{{page.url}}?redirect=1&text={{site.rooturl}}{{page.url}}&via=IFPRI" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
+        <a href="https://twitter.com/share?url={{site.baseurl}}{{page.url}}?redirect=1&text=http://arabspatial.org?blog_title={{page.id}}&via=IFPRI" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
       </div>
 
-      <div class="fb-share-button fb-share-left" data-href="{{site.baseurl}}/{{page.url}}" data-type="button" style="margin-top: 1px;"></div>
+      <div class="fb-share-button fb-share-left" data-href="http://arabspatial.org?blog_title={{page.id}}" data-type="button" style="margin-top: 1px;"></div>
 
       <!-- <div class="g-plus" data-action="share" data-annotation="none"></div> -->
 
         </div>
 
-      
+
   
       
 
-      <div class="panel panel-default">
+
+          {% if page.language == 'english' %}
+          <div class="panel panel-default">
+              {% else %}
+              <div class="panel panel-default" style="float: right;">
+                  {% endif %}
         
-        <div id="panel-body" class="panel-body">{{site.rooturl}}{{page.url}}</div>
+        <div id="panel-body" class="panel-body"></div>
       </div>
     </div>
 
