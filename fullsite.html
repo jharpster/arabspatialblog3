@@ -41,6 +41,9 @@ title: ''
   <body>
 
       <div class="bodyContainer clearfix grayBackground">
+          <div id="outerHeader" class="clearfix">
+              <div id="header"></div>
+          </div>
         <div class="feedContainer clearfix grayBackground">
             <div class="blog-header">
                 <div class="blog-title english showblog" style="font-size:30px;color:#3d3d3d;">{{site.blogname}}</div>
@@ -232,6 +235,8 @@ title: ''
     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
     <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
+      <script src="{{site.baseurl}}/ws_extras.js"></script>
+
     <script>
 
 
@@ -348,7 +353,36 @@ title: ''
         $(".dateText").css('direction','ltr');
     }
 
-        
+    $( document ).ready(function() {
+        var Header = new WSHeader('header', HEADER_MOCK_OBJ, {
+            onLogoClick:function() {
+                var url = 'http://54.191.215.52/ArabSpatial/?id=MENA&s=lp';
+                window.open(url, "_self");
+            },
+            onMapClick:function() {
+                console.log("Clicked on Map");
+                var url = 'http://54.191.215.52/ArabSpatial/?id=MENA&s=map';
+                window.open(url, "_self");
+            },
+            onBlogClick:function() {
+                console.log("Clicked on Blog");
+            }
+        });
+        var Footer = new WSFooter('footer', FOOTER_MOCK_OBJ, {
+            onLang1Click:function() {
+                Header.translate('ara');
+                Footer.translate('ara');
+                translate('ara');
+            },
+            onLang2Click:function() {
+                Footer.translate('en');
+                Header.translate('en');
+                translate('en');
+            }
+        });
+        Footer.translate('en');
+        Header.translate('en');
+    });
 
     
 
