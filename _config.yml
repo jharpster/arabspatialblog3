@@ -1,13 +1,13 @@
 baseurl: /arabspatialblog
-rooturl: http://50.62.145.200/arabspatialblog
+rooturl: http://http://54.191.215.52/blog
 permalink: pretty
 markdown: kramdown
 encoding: UTF-8
 highlighter: rouge
 prose:
   rooturl: '_posts'
-  siteurl: 'http://50.62.145.200/arabspatialblog/'
-  relativeLinks: 'http://arabspatial.org/arabspatialblog/links.jsonp'
+  siteurl: 'http://http://54.191.215.52/blog/'
+  relativeLinks: 'http://http://54.191.215.52/blog/links.jsonp'
   media: 'media'
   metadata:
     _posts/events:
