@@ -9,7 +9,7 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'archive_index.html')
       self.data['period'] = period
       self.data['period_posts'] = posts
-      archive_title_prefix = site.config['archive_title_prefix'] || 'Archive: “'
+      archive_title_prefix = site.config['archive_title_prefix'] || "Archive: “"
       archive_title_suffix = site.config['archive_title_suffix'] || '”'
       self.data['title'] = "#{archive_title_prefix}#{period["month"]}-#{period["year"]}#{archive_title_suffix}"
     end
