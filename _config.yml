@@ -1,4 +1,4 @@
-baseurl: /arabspatialblog
+baseurl: /blog
 rooturl: http://http://54.191.215.52/blog
 permalink: pretty
 markdown: kramdown
