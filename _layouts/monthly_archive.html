@@ -2,8 +2,10 @@
 layout: blogpost
 ---
 <div class="monthly-archive">
+    <div class="seeBlogEntries" style="margin-top:20px;margin-left:10px;"><a href="{{site.baseurl}}/">< All blog entries</a></div>
   <div>
-    <span class="title">Monthly archive for {{page.year}}/{{page.month}}</span>
+    <!--<span class="title">Monthly archive for {{page.year}}/{{page.month}}</span>-->
+      <div class="month" style="margin-left:10px;"><i class="fa fa-calendar"></i>   Archive: {{ page.year }} - {{page.month}}</div>
   </div>
   <div>
     <ul>
