@@ -1,0 +1,163 @@
+---
+title: ''
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Arab Spatial News</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{site.baseurl}}/css/bootstrap.css" rel="stylesheet">
+
+    <link href="{{site.baseurl}}/css/fontstyles.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+
+      <link href="{{site.baseurl}}/css/landingPageStyle.css" rel="stylesheet">
+
+    <!--<link href="{{site.baseurl}}/fullsitestyle.css" rel="stylesheet">-->
+
+    <!--<link href="{{site.baseurl}}/myFeedStyle.css" rel="stylesheet">-->
+
+    <link href="{{site.baseurl}}/css/animate.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!--Gotham-Book fonts-->
+    <link href="{{site.baseurl}}/fonts/GothaBolIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaBoo.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaBooIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaLig.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaLigIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaMedIta.css" rel="stylesheet" type="text/css" />
+    <link href="{{site.baseurl}}/fonts/GothaMed.css" rel="stylesheet" type="text/css" />
+
+    
+
+  <body>
+
+      <div class="bodyContainer clearfix">
+          <div class="blog-header">
+              <div class="blog-title english showblog" style="font-size:30px;color:#3d3d3d;">{{site.blogname}}</div>
+              <div class="blog-title arabic hideblog" style="font-size:38px;color:#3d3d3d;">{{site.blognameArabic}}</div>
+          </div>
+        <div class="feedContainer clearfix">
+            <!--<button type="button" id="en" class="btn btn-default">english</button>-->
+            <!--<button type="button" id="ara" class="btn btn-default">arabic</button>-->
+            <div class="blogFeed clearfix">
+              {{content}}
+            </div>
+            <div class="sidePanel">
+                <div class="eventTitleContainer">
+                    <h1 class="events-title">EVENTS</h1><span class="seeMore see-more-events">See more events ></span>
+                    <div class="eventFeed clearfix">
+                        {% include events_LP.html %}
+                    </div>
+                </div>
+                <div class="eventTitleContainer">
+                    <h1 class="events-title">PUBLICATIONS</h1><span class="seeMore see-more-publications">See more publications ></span>
+                    <div class="eventFeed clearfix">
+                        {% include publications_LP.html %}
+                    </div>
+                </div>
+                <div class="eventTitleContainer">
+                    <h1 class="events-title">NEWS</h1>
+                    <div class="eventFeed clearfix">
+                        {% include newsletters_LP.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+
+    </div><!-- /.container -->
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+    
+    <script>
+
+        $('.btn').click(function(){
+
+            var lngCode = $(this).attr('id');
+            translate(lngCode)
+
+
+        });
+
+//        var activeLngCode = "en";
+
+        function translate(lngCode){
+
+//            if(lngCode != activeLngCode){
+//
+//                $(".article").toggleClass('showblog hideblog');
+//                activeLngCode = lngCode;
+//
+//            }
+
+            if(lngCode === "ara"){
+
+
+                $(".arabic").removeClass('hideblog');
+                $(".arabic").addClass('showblog');
+
+                $(".english").removeClass('showblog');
+                $(".english").addClass('hideblog');
+
+                $(".summeryText").css('direction','rtl');
+                $(".dateText").css('direction','rtl');
+
+            }if (lngCode === "en"){
+
+                $(".english").removeClass('hideblog');
+                $(".english").addClass('showblog');
+
+                $(".arabic").removeClass('showblog');
+                $(".arabic").addClass('hideblog');
+
+                $(".summeryText").css('direction','ltr');
+                $(".dateText").css('direction','ltr');
+
+            }
+
+        }
+
+        if (window.location.hash === '#arabic') {
+            $(".arabic").removeClass('hideblog');
+            $(".arabic").addClass('showblog');
+
+            $(".summeryText").css('direction','rtl');
+
+            $(".dateText").css('direction','rtl');
+
+            $(".english").removeClass('showblog');
+            $(".english").addClass('hideblog');
+        }else{
+            $(".summeryText").css('direction','ltr');
+
+            $(".dateText").css('direction','ltr');
+        }
+
+
+
+  
+  </script>
+
+  </body>
+</html>

@@ -1,4 +1,5 @@
 baseurl: /arabspatialblog
+rooturl: http://54.191.215.52/arabspatialblog
 permalink: pretty
 markdown: kramdown
 encoding: UTF-8
