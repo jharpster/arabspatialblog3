@@ -3,7 +3,6 @@ rooturl: http://54.191.215.52/arabspatialblog
 permalink: pretty
 markdown: kramdown
 encoding: UTF-8
-highlighter: rouge
 blogname: ARAB FOOD AND NUTRITION SECURITY BLOG
 blognameArabic: مدونة الأمن الغذائي و التغذوي العربي
 prose:
