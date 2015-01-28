@@ -131,20 +131,17 @@ prose:
             - name: "Careers"
               value: "careers"
       - name: "author"
-        field:
-          element: "multiselect"
-          label: "Add Author"
-          alterable: "true"
-          placeholder: "Choose Author"
-          options:
-            - name: "IFPRI"
-              value: "IFPRI"
-            - name: "Perrihan Al-Riffai"
-              value: "Perrihan Al-Riffai (IFPRI)"
-            - name: "Yifei Liu"
-              value: "Yifei Liu (IFPRI)"
-            - name: "Olivier Ecker"
-              value: "Olivier Ecker (IFPRI)"
+              field:
+                element: "text"
+                label: "Author"
+                value: ""
+                placeholder: "Author"
+      - name: "affiliation"
+                    field:
+                      element: "text"
+                      label: "Affiliation"
+                      value: ""
+                      placeholder: "affiliation"
     _posts/static:
       - name: "layout"
         field:
