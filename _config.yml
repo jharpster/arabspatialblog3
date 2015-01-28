@@ -131,17 +131,17 @@ prose:
             - name: "Careers"
               value: "careers"
       - name: "author"
-          field:
-            element: "text"
-            label: "Author"
-            value: ""
-            placeholder: "Author"
+        field:
+          element: "text"
+          label: "Author"
+          value: ""
+          placeholder: "Author"
       - name: "affiliation"
-          field:
-            element: "text"
-            label: "Affiliation"
-            value: ""
-            placeholder: "affiliation"
+        field:
+          element: "text"
+          label: "Affiliation"
+          value: ""
+          placeholder: "affiliation"
     _posts/static:
       - name: "layout"
         field:
