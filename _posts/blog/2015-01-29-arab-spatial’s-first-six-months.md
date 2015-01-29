@@ -48,8 +48,3 @@ A: Based on the reactions and uptake in the first six months, I think we can exp
 Since circumstances vary drastically across the Middle East and North Africa, we’re also developing country-specific spatials. Countries can fill in a generic template that we are developing with their own information that we can then use to build the relevant country spatial. We hope that exercise will spark national policy debate and action. Iraq, Yemen, and Egypt will be the first national-level sites, but eventually we want to launch this type of microsite for as many countries that we can in the region. Finally, there has also been interest from other world regions, so we may see the tool expanding beyond the Arab world.
 
 In general, I hope that this entire process and the existence of Arab Spatial will generate the type of data we’ve been trying to get for so long in this region and promote the sharing of that data. Lack of data is always a handicap when putting together policy. If we, as researchers, can support decisionmakers with critical, complex information in a palatable way, they can establish the evidence-based policies that form the backbone of economic development.
-
-_Related materials_
-* [Blog post: Introducting Arab Spatial](http://www.ifpri.org/blog/introducing-arab-spatial-online-interactive-atlas-arab-world)
-* [Blog post: A User's Experience with Arab Spatial](http://www.ifpri.org/blog/user-s-experience-arab-spatial)
-* [IFPRI’s work in the Middle East and North Africa region](http://www.ifpri.org/book-6959/ourwork/researcharea/middle-east-and-north-africa)
