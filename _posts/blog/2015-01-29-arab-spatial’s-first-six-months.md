@@ -13,7 +13,7 @@ tags:
   - food security
 author: IFPRI
 affiliation: IFPRI
-splash: http//www.ifpri.org/sites/default/files/imagecache/prefab_large/ArabSpatial_tn2.jpg
+splash: https://farm8.staticflickr.com/7498/16147010630_f59f6a7f00_o.jpg
 youtubeid: 
 commit_message: THIS WORKED FOR SURE!!!!
 header: IFPRI Senior Research Analyst Perrihan Al-Riffai discusses the progress and promise of Arab Spatial, an open-access database and interactive mapping tool she helped design that houses and geographically displays data on more than 150 indicators of development in the Middle East and North Africa.
