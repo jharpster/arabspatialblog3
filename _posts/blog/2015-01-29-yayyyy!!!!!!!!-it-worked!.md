@@ -1,22 +1,22 @@
 ---
-layout:blog
-published:true
-title:Yayyyy!!!!!!!! it worked!
-category:blog
-language:english
-comments:true
+layout: blog
+published: true
+title: Yayyyy!!!!!!!! it worked!
+category: blog
+language: english
+comments: true
 tags:
   - Middle East and North Africa
   -  food security
   -  tag
   -  foo
   -  bar
-author:IFPRI
-affiliation:IFPRI
-splash:http//www.ifpri.org/sites/default/files/imagecache/prefab_large/arabfs_small.jpg
+author: IFPRI
+affiliation: IFPRI
+splash: http//www.ifpri.org/sites/default/files/imagecache/prefab_large/arabfs_small.jpg
 youtubeid:
-commit_message:it worked!
-header:In the aftermath of the “Arab Spring”—a series of demonstrations, protests, and wars that swept through the Arab world during 2010-2011 and toppled several governments in the region—many researchers identified rising food prices and the resulting food insecurity as underlying causes. 
+commit_message: it worked!
+header: In the aftermath of the “Arab Spring”—a series of demonstrations, protests, and wars that swept through the Arab world during 2010-2011 and toppled several governments in the region—many researchers identified rising food prices and the resulting food insecurity as underlying causes. 
 ---
 ## Experts at recent IFPRI Policy Seminar examine challenges ahead
 
