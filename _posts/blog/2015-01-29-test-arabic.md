@@ -1,6 +1,6 @@
 ---
 layout: blog
-published: 
+published: true
 title: Test arabic
 category: blog
 language: arabic
