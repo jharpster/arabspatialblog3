@@ -56,7 +56,12 @@ section: blog
                 {{item.date | date:"%B %d, %Y"}}
             </div>
 
-            <div class="dateText" style="text-align:right;"> إعداد: <span>{{ item.author }}</span></div>
+            <div class="dateText" style="text-align:right;"> إعداد:
+                <span>{{ item.affiliation }}
+                {% if item.author %}
+                    - {{item.author}}
+                {% endif %}
+                </span></div>
         </div>
 
         {% if item.content %}
@@ -117,7 +122,12 @@ section: blog
         <div class='date'>
             <div class="dateText">{{item.date | date:"%B %d, %Y"}}</div>
             {% if item.author %}
-            <div class="dateText" >By: <span>{{ item.author }}</span></div>
+            <div class="dateText" >By:
+                <span>{{ item.author }}
+                    {% if item.affiliation %}
+                        - {{item.affiliation}}
+                    {% endif %}
+                </span></div>
             {% endif %}
         </div>
 

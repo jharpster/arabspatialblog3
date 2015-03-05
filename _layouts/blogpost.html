@@ -165,11 +165,20 @@ title: ''
     }());
 
 
-    function copyText()
-      {
+    function copyText(){
+
+
+
         var item = $(".individualShare");
 
+        var long_url = item.context.URL;
+
+//          console.log("url: ",item.context.URL);
           console.log("item: ",item);
+
+        var shortURL = ShortLinkBitly("http://54.191.215.52/arabspatialblog/blog/2015/01/28/date23/");
+
+        console.log(shortURL);
 
 //      if ($("#ThisIsBlogPost").length){
 //
@@ -195,8 +204,89 @@ title: ''
       $("#panel-body").addClass('animated zoomIn');
 
 
-
       }
+
+    /*********************************************
+     * Short Link using Bitly
+     *********************************************/
+    function ShortLinkBitly( pLongUrl ) { /*pLongUrl is the long URL*/
+
+        /*Long URL must start with a protocol, bitly can't (and won't) figure out the right protocol.*/
+        if ( !pLongUrl.match(/(ftp|http|https):\/\//i) ) {
+            return "Error: Link must start with a protocol (e.g.: http or https).";
+        }
+
+        var username = "ifpri2014";
+        var apiKey = "R_a092be17d2ff4b9f9974bb7ae8b9f432";
+
+        /*Ajax call*/
+        $.ajax(
+                {
+                    url: 'https://api-ssl.bitly.com/v3/shorten?login=' + username + '&apiKey=' + apiKey + '&format=json&longUrl=' + encodeURIComponent(pLongUrl),
+
+                    dataType: 'jsonp',
+
+                    success: function( response ) {
+                        if ( response.status_code == 500) {
+
+                            /*500 status code means the link is malformed.*/
+                            return "Error: Invalid link.";
+
+                        } else if ( response.status_code != 200) {
+
+                            /*If response is not 200 then an error ocurred. It can be a network issue or bitly is down.*/
+                            return "Error: Service unavailable.";
+
+                            /*Uncomment the following line only for debugging purposes*/
+                            /*console.log('Response: ' + response.status_code + '-' + response.status_txt);*/
+                        }
+                        else
+                            return response.data.url; /* OK, return the short link */
+                    },
+
+                    contentType: 'application/json'
+                });
+
+    }
+    /* END: Short Link using Bitly */
+
+//    function bit_url(url){
+//        var url=url;
+//
+//        var username = "ifpri2014";
+//        var key = "R_a092be17d2ff4b9f9974bb7ae8b9f432";
+//
+//        $.ajax({
+//            url:"http://api.bit.ly/v3/shorten",
+//            data:{longUrl:url,apiKey:key,login:username},
+//            dataType:"jsonp",
+//            success:function(v)
+//            {
+//                var bit_url=v.data.url;
+//                console.log(bit_url);
+//            }
+//        });
+//    }
+
+
+
+//      function get_short_url(long_url, login, api_key, func){
+//
+//
+//            $.getJSON(
+//                "http://api.bitly.com/v3/shorten?callback=?",
+//                {
+//                    "format": "json",
+//                    "apiKey": api_key,
+//                    "login": login,
+//                    "longUrl": long_url
+//                },
+//                function(response)
+//                {
+//                    func(response.data.url);
+//                }
+//            );
+//        }
 
   </script>
   <script type="text/javascript">

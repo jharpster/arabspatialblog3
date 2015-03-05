@@ -31,7 +31,12 @@ section: blog
     {% if page.language == 'arabic' %}
     <div class='date' style="">
       
-      <div class="dateText"> إعداد: <span>{{ page.author }}</span> </div>
+      <div class="dateText"> إعداد:
+          <span>{{ page.affiliation }}
+                {% if page.author %}
+                        - {{page.author}}
+                    {% endif %}
+          </span> </div>
           {% if page.author %}
             <div class="dateText">{{page.date | date:"%B %d, %Y"}} </div>
           {% endif %}
@@ -49,7 +54,12 @@ section: blog
 
 
           {% if page.author %}
-            <div class="dateText" >By: <span>{{ page.author }}</span></div>
+            <div class="dateText" >By:
+                <span>{{ page.author }}
+                    {% if page.affiliation %}
+                        - {{page.affiliation}}
+                    {% endif %}
+                </span></div>
           {% endif %}
 
     {% endif %}
