@@ -1,5 +1,5 @@
-baseurl: /arabspatialblog
-rooturl: http://54.191.215.52/arabspatialblog
+baseurl: /blog
+rooturl: http://52.28.12.44/blog
 permalink: pretty
 markdown: kramdown
 encoding: UTF-8
@@ -7,8 +7,8 @@ blogname: ARAB FOOD AND NUTRITION SECURITY BLOG
 blognameArabic: مدونة الأمن الغذائي و التغذوي العربي
 prose:
   rooturl: '_posts'
-  siteurl: 'http://54.191.215.52/arabspatialblog'
-  relativeLinks: 'http://54.191.215.52/arabspatialblog/links.jsonp'
+  siteurl: 'http://52.28.12.44/blog'
+  relativeLinks: 'http://52.28.12.44/blog/links.jsonp'
   media: 'media'
   metadata:
     _posts/events:
