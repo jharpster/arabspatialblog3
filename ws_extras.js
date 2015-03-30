@@ -266,16 +266,8 @@ function DropDownController(parentNode, items, onSelect, intialLangCode, intialL
 	})();
 }
 
-//parentNodeID, model, onClickConfig
-//function WSFooter(parentNode, lang1Code, lang2Code, translateModel, model, onLangClick, blogURL) {
-//onClickConfig['onLang1Click']
-
-function WSFooter(parentNodeID, placeHolderVar, onClickConfig) {
+function WSFooter(parentNode, lang1Code, lang2Code, translateModel, model, onLangClick, blogURL) {
 	
-	var parentNode = $("#"+parentNodeID);
-	self._Model = {
-		"":""
-	};
 	var self = this;
 	
 	this.translate = function(langCode, langDir) {
@@ -394,7 +386,6 @@ function WSFooter(parentNodeID, placeHolderVar, onClickConfig) {
 	})();	
 }
 
-//parentNodeID, model, onClickConfig
 function WSHeader(parentNode, spatialID, model, blogURL, spatialURLName) {
 	
 	var self = this;
