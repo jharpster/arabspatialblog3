@@ -386,7 +386,7 @@ function WSFooter(parentNode, lang1Code, lang2Code, translateModel, model, onLan
 	})();	
 }
 
-function WSHeader(parentNode, spatialID, model, blogURL, spatialURLName) {
+function WSHeader(parentNode, spatialID, model, blogURL, spatialURLName, appBaseURL) {
 	
 	var self = this;
 	self._CurrentLangCode;
@@ -440,6 +440,7 @@ function WSHeader(parentNode, spatialID, model, blogURL, spatialURLName) {
 		self._MapButton = $("<a>").addClass("mapSectionButton headerTextButton headerButtonColorStyle").appendTo(self._HeaderTextButtons);
 		self._BlogNuttonNode = $("<a>").addClass("blogSectionButton headerTextButton headerButtonColorStyle").appendTo(self._HeaderTextButtons);
 		
+		var APP_BASE_URL = 'http://' + window.location.host;
 		self._OnTranslateFunctions.push(function(langCode) {
 			
 			var langQueryStr = "?lang="+self._CurrentLangCode;
