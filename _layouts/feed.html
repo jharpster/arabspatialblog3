@@ -255,12 +255,13 @@ title: ''
 
             loadHeaderAndFooterObject(SpatialID, G_CurrentLangCode, function(headerAndFooterObj) {
 
+                G_LangLoaded[G_CurrentLangCode] = 1;
+
                 var Header = new WSHeader($("#header"), SpatialID, headerAndFooterObj, blogURL, spatialURLName);
                 var Footer = new WSFooter($("#footer"), G_LANG1_CODE, G_LANG2_CODE, headerAndFooterObj, extrasConfig, function(langCode) {
 
                     G_CurrentLangCode = langCode;
                     var langDir = langTextDirectionObj[langCode];
-                    G_LangLoaded[G_CurrentLangCode] = 1;
 
                     var langCodeForBlog = langDir === 'rtl' ? 'ara':'en';
 
@@ -275,7 +276,7 @@ title: ''
                     loadHeaderAndFooterObject(SpatialID, G_LANG2_CODE, function(headerAndFooterObjLang2) {
 
                         G_AppUtils.mergeTwoObjects(headerAndFooterObj, headerAndFooterObjLang2, G_LANG1_CODE, G_LANG2_CODE);
-
+                        G_LangLoaded[G_CurrentLangCode] = 1;
                         Header.translate(langCode, langDir);
                         Footer.translate(langCode, langDir);
                         translate(langCodeForBlog);
