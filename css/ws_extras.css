@@ -145,10 +145,9 @@
 }
 
 #header {
-	position:absolute;
-	top:0;
+
 	background:#303030;
-	z-index:5 !important;
+	
 	line-height:34px;
 	font-size:18px;
 	font-weight:400;
