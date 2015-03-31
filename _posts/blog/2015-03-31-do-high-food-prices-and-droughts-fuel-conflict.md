@@ -1,6 +1,6 @@
 ---
 layout: blog
-published: true
+published: false
 title: "Do High Food Prices and Droughts Fuel Conflict?"
 category: blog
 language: english
