@@ -252,6 +252,7 @@ title: ''
             var spatialURLName = extrasConfig['spatial_url_name'];
             var langTextDirectionObj = extrasConfig['lang_text_direction'];
             var langForURL = extrasConfig[G_CurrentLangCode + '_url'];
+            G_AppUtils.updateURL("blog", langForURL, spatialURLName);
 
             loadHeaderAndFooterObject(SpatialID, G_CurrentLangCode, function(headerAndFooterObj) {
 
