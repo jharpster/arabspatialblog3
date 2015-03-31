@@ -22,6 +22,7 @@ tags:
   - Kenya
   - Zambia
   - Droughts
+splash: "https://www.flickr.com/photos/ifprimena/16721670658/"
 ---
 
 The world has seen more and more conflicts in recent years, such as in Syria, Nigeria, and Yemen. What explains these conflicts and what are the root causes and effects of ongoing civil violence?
