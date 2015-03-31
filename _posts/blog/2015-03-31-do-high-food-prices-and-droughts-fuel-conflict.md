@@ -6,6 +6,22 @@ category: blog
 language: english
 comments: true
 author: "Highlights from Chapter 7 of the 2014-2015 Global Food Policy Report - By Jacopo Bordignon"
+tags: 
+  - Global Food Policy Report
+  - IFPRI
+  - Civil Conflict
+  - Food Prices
+  - Natural Disasters
+  - Food Security
+  - Syria
+  - Sudan
+  - South Sudan
+  - Somalia
+  - Nigeria
+  - India
+  - Kenya
+  - Zambia
+  - Droughts
 ---
 
 The world has seen more and more conflicts in recent years, such as in Syria, Nigeria, and Yemen. What explains these conflicts and what are the root causes and effects of ongoing civil violence?
