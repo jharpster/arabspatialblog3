@@ -1,7 +1,7 @@
 ---
 layout: blog
 published: false
-title: "Do high food prices and droughts fuel conflict?"
+title: "Do High Food Prices and Droughts Fuel Conflict?"
 category: blog
 language: english
 comments: true
@@ -37,5 +37,4 @@ Food price shocks are both a determinant and effect of conflict. The recent esca
 
 To tackle natural disasters and food price shocks, governments should promote inclusive policies that build resilience to shocks and well-targeted and effective responses following these shocks.  For example, effective social safety nets that can be scaled up in times of crises, such as the Productive Safety Net Programme (PSNP) in Ethiopia or the Hunger Safety Net Programme (HSNP) in Kenya, can help to protect the poor against food price shocks. Examples from [India](http://www.foodgrainsbank.ca/uploads/Food reserves in India - FINAL.pdf),       [Kenya  ,](http://fsg.afre.msu.edu/kenya/iaae_kenya_effects_ncpb_maize_policy.pdf) and   [Zambia](http://ageconsearch.umn.edu/bitstream/120771/2/wp60.pdf) show that, if managed well, public grain reserves can help safeguard against global food price shocks, especially for countries that are heavily dependent on food imports. In the longer run, governments should support a competitive agricultural sector and trade integration.
 
-It is important to provide adequate information to both policymakers and stakeholders, such as local farmers, on the likely consequences of government interventions and required resources to make these successful. Understanding government capacity for [creating subsidies](http://arabspatial.org/) can help policymakers and development program implementers tailor programs for building resilience to rising food prices. 
-
+It is important to provide adequate information to both policymakers and stakeholders, such as local farmers, on the likely consequences of government interventions and required resources to make these successful. Understanding government capacity for [creating subsidies](http://arabspatial.org/) can help policymakers and development program implementers tailor programs for building resilience to rising food prices.
