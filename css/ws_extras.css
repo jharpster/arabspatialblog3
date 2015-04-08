@@ -295,3 +295,5 @@
 .overflowHidden {
 	overflow:hidden !important;
 }
+
+.langButton, .langBorder { display:none;}
