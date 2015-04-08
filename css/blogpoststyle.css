@@ -847,3 +847,5 @@ margin-top: -24px;
     word-wrap: break-word;
 }
 .langButton, .langBorder { display:none;}
+
+.dropdown, .user-menu { display:none;}
