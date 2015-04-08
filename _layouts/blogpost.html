@@ -40,7 +40,7 @@ title: ''
 
 
 
-  <body>
+  <body id="body">
     <div id="fb-root"></div>
 
     <script>(function(d, s, id) {
@@ -384,36 +384,74 @@ $('#seeMap').click(function(){
       $("#blog-title").html("{{site.blogname}}");
   }
 
-  $( document ).ready(function() {
-      var Header = new WSHeader('header', HEADER_MOCK_OBJ, {
-          onLogoClick:function() {
-              var url = 'http://54.191.215.52/ArabSpatial/?id=MENA&s=lp';
-              window.open(url, "_self");
-          },
-          onMapClick:function() {
-              console.log("Clicked on Map");
-              var url = 'http://54.191.215.52/ArabSpatial/?id=MENA&s=map';
-              window.open(url, "_self");
-          },
-          onBlogClick:function() {
-              console.log("Clicked on Blog");
-          }
-      });
-      var Footer = new WSFooter('footer', FOOTER_MOCK_OBJ, {
-          onLang1Click:function() {
-              Header.translate('ara');
-              Footer.translate('ara');
-              translate('ara');
-          },
-          onLang2Click:function() {
-              Footer.translate('en');
-              Header.translate('en');
-              translate('en');
-          }
-      });
-      Footer.translate('en');
-      Header.translate('en');
-  });
+  $(document).ready(function() {
+
+        var SpatialID = "MENA";
+        var G_AppUtils = new Utils();
+        var RESOURCES_DIR = 'http://' + window.location.host + "/datablast/resources";
+
+        function loadExtrasConfig(spatialID, callback) {
+
+            var id1 = ["extras", spatialID].join("_");
+            G_AppUtils.executeGETRequest(RESOURCES_DIR + "/"+id1+".json", callback);
+        }
+        function loadHeaderAndFooterObject(spatialID, langCode, callback) {
+
+            var id1 = ["header_footer_translate", spatialID, langCode].join("_");
+            G_AppUtils.executeGETRequest(RESOURCES_DIR + "/"+id1+".json", function(headerFooterTranslateObj) {
+                callback(headerFooterTranslateObj);
+            });
+        }
+
+        var queryStringParams = G_AppUtils.getQueryStringParameters();
+        var queryLangCode = queryStringParams['lang'];
+        var G_CurrentLangCode = queryLangCode;
+        var G_LANG1_CODE = G_CurrentLangCode ? G_CurrentLangCode:"lang1";
+        var G_LANG2_CODE = G_LANG1_CODE === "lang1" ? "lang2":"lang1";
+        G_CurrentLangCode = G_CurrentLangCode ? G_CurrentLangCode:"lang1";
+        var G_LangLoaded = {};
+
+        loadExtrasConfig(SpatialID, function(extrasConfig) {
+
+            var blogURL = extrasConfig['blog_url'];
+            var spatialURLName = extrasConfig['spatial_url_name'];
+            var langTextDirectionObj = extrasConfig['lang_text_direction'];
+            var langForURL = extrasConfig[G_CurrentLangCode + '_url'];
+            G_AppUtils.updateURL("blog", langForURL, spatialURLName, true);
+
+            loadHeaderAndFooterObject(SpatialID, G_CurrentLangCode, function(headerAndFooterObj) {
+
+                G_LangLoaded[G_CurrentLangCode] = 1;
+
+                var Header = new WSHeader($("#header"), SpatialID, headerAndFooterObj, blogURL, spatialURLName);
+                var Footer = new WSFooter($("#footer"), G_LANG1_CODE, G_LANG2_CODE, headerAndFooterObj, extrasConfig, function(langCode) {
+
+                    G_CurrentLangCode = langCode;
+                    var langDir = langTextDirectionObj[langCode];
+
+                    var langCodeForBlog = langDir === 'rtl' ? 'ara':'en';
+
+                    if(G_LangLoaded[langCode]) {
+
+                        Header.translate(langCode, langDir);
+                        Footer.translate(langCode, langDir);
+                        translate(langCodeForBlog);
+
+                        return;
+                    }
+                    loadHeaderAndFooterObject(SpatialID, G_LANG2_CODE, function(headerAndFooterObjLang2) {
+
+                        G_AppUtils.mergeTwoObjects(headerAndFooterObj, headerAndFooterObjLang2, G_LANG1_CODE, G_LANG2_CODE);
+                        G_LangLoaded[G_CurrentLangCode] = 1;
+                        Header.translate(langCode, langDir);
+                        Footer.translate(langCode, langDir);
+                        translate(langCodeForBlog);
+                    });
+                }, blogURL);
+                Footer.clickLangButton(G_LANG1_CODE);
+            });
+        });
+    });
 
   </script>
 
