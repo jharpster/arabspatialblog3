@@ -2,22 +2,18 @@
 layout: blog
 published: true
 title: "Is open data transforming the development frontier? IFPRI’s “D8” participants think so."
-name: 2013-03-13-is-open-data-transforming-the-development-frontier-ifpri-s-d8-participants-think-so.md
 category: blog
-language: english
 comments: true
+splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/Harvest-Choice-screenshot2.jpg"
+header: "Open data is a public good for the good of the public. Indeed, a growing movement in agricultural development is calling for institutions to open up their data and let it be freely available without restriction, publicly accessible, deliverable and downloadable in desirable and descriptive ways, and easy to mix with other data and tools."
 tags: 
   - open access
   - database
   - tools
-author: IFPRI
-affiliation: IFPRI
-splash: "http//www.ifpri.org/sites/default/files/imagecache/prefab_large/Harvest-Choice-screenshot2.jpg"
-youtubeid: 
-commit_message: Uploaded new post.
-header: "Open data is a public good for the good of the public. Indeed, a growing movement in agricultural development is calling for institutions to open up their data and let it be freely available without restriction, publicly accessible, deliverable and downloadable in desirable and descriptive ways, and easy to mix with other data and tools."
-isNewFile: false
+author: 
+  - IFPRI
 ---
+
 Open data is a public good for the good of the public. Indeed, a growing movement in agricultural development is calling for institutions to open up their data and let it be freely available without restriction, publicly accessible, deliverable and downloadable in desirable and descriptive ways, and easy to mix with other data and tools. Even [Bono](http://blogs.worldbank.org/opendata/bono-and-data-beyond-2015-how-can-the-bank-measure-up) recently made a call for open data “to turbocharge the fight against poverty.”
 
 Participants in IFPRI’s [Data Eight (D8)](http://www.ifpri.org/event/open-data-agriculture-side-event-ifpri) event, which served as a follow-on side event to the earlier [G8 International Conference on Open Data for Agriculture](https://sites.google.com/site/g8opendataconference/home), agreed that data is meaningless to most until it becomes a story—and the telling gets better when data is opened up to scrutiny, reuse, and redistribution by a broader pool of thinkers.
