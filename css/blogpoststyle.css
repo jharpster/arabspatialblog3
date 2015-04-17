@@ -846,6 +846,5 @@ margin-top: -24px;
     white-space: -o-pre-wrap;   /* Opera 7 */
     word-wrap: break-word;
 }
-.langButton, .langBorder { display:none;}
 
 .dropdown, .user-menu { display:none;}
