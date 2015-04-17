@@ -11,10 +11,10 @@ section: blog
 
 <div id="{{item.id}}"  class="articleblog clearfix arabic hideblog">
 
-    {% if item.splash or item.youtube_url %}
+    {% if item.splash or item.youtubeid %}
 
-    {% if item.youtube_url %}
-    {% capture youtubeurl %}{{item.youtube_url}}{% endcapture %}
+    {% if item.youtubeid %}
+    {% capture youtubeurl %}{{item.youtubeid}}{% endcapture %}
     <div class="video-wrapper">
         <a href='{{site.baseurl}}{{item.url}}'><div class="youtubeThumbnail">
             <img width="100%" src='http://img.youtube.com/vi/{{youtubeurl}}/hqdefault.jpg' alt='' />
@@ -23,7 +23,7 @@ section: blog
     </div>
     {% endif %}
 
-    {% if item.splash && item.youtube %}
+    {% if item.splash && item.youtubeid %}
     {% if item.splash contains 'http' %}
     {% capture url %}{{item.splash}}{% endcapture %}
     {% else %}
@@ -81,10 +81,10 @@ section: blog
 
 <div id="{{item.id}}" class="articleblog clearfix english showblog">
 
-    {% if item.splash or item.youtube_url %}
+    {% if item.splash or item.youtubeid %}
 
-    {% if item.youtube_url %}
-    {% capture youtubeurl %}{{item.youtube_url}}{% endcapture %}
+    {% if item.youtubeid %}
+    {% capture youtubeurl %}{{item.youtubeid}}{% endcapture %}
     <div class="video-wrapper">
         <a href='{{site.baseurl}}{{item.url}}'><div class="youtubeThumbnail">
             <img width="100%" src='http://img.youtube.com/vi/{{youtubeurl}}/hqdefault.jpg' alt='' />

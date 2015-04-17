@@ -73,7 +73,7 @@ section: blog
 
 
 
-        {% if page.splash or page.youtube_url %}
+        {% if page.splash or page.youtubeid %}
 
           {% if page.splash %}
           {% if page.splash contains 'http' %}
@@ -100,13 +100,12 @@ section: blog
           {% endif %}
 
 
-        {% if page.youtube_url %}
-        {% capture youtubeurl %}{{page.youtube_url}}{% endcapture %}
+        {% if page.youtubeid %}
+        {% capture youtubeurl %}{{page.youtubeid}}{% endcapture %}
             <div class="video-wrapper">
               <iframe width="560" height="315"
               src="//www.youtube.com/embed/{{youtubeurl}}"
               frameborder="0" allowfullscreen></iframe>
-
             </div>
         {% endif %}
 
