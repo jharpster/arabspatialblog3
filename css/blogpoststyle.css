@@ -79,6 +79,7 @@
   /*height:110px;*/
   width: 100%;
   float: left;
+  margin-bottom: 5px;
 }
 .video-container {
   position: relative;
