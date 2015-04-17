@@ -12,7 +12,6 @@ tags:
   - tag 3
 author: "Author - name: title"
 affiliation: IFPRI
-splash: 
 youtubeid: ZezjKbGvK8Y
 commit_message: Uploaded new post.
 ---
