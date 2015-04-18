@@ -1,17 +1,18 @@
 ---
 layout: blog
 published: true
-title: Test post
+title: "Title, name:name - name:name, Title"
 category: blog
 language: english
-comments: true
+comments: false
 tags: 
-  - tag
-author: author
-affiliation: IFPRI
+  - tags
+  - tags
+  - tag-s
+author: "author, name:name - name:name, author"
+affiliation: "Affiliation, name:name - name:name, Affiliation"
 splash: 
 youtubeid: 
 commit_message: commit message
 md_file_name: new md file
 ---
-content
