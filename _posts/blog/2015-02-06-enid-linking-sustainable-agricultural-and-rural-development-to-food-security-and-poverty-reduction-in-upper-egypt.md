@@ -5,6 +5,7 @@ title: "ENID: Linking Sustainable Agricultural and Rural Development to Food Sec
 category: blog
 language: english
 comments: true
+splash: "https://farm8.staticflickr.com/7340/16272748420_2fdcaa1995_n.jpg"
 tags: 
   - sustainable agricultural development
   - Qena
@@ -15,12 +16,10 @@ tags:
   - post harvest loss
   - roof gardening
   - milk waste
-author: "Heba Handoussa, Director General - ENID; and Dyaa Abdou, Director of Sustainable Agricultural Development Programme - ENID"
-affiliation: 
-splash: "https://farm8.staticflickr.com/7340/16272748420_2fdcaa1995_n.jpg"
-youtubeid: 
-commit_message: commit message
+author: 
+  - "Heba Handoussa, Director General - ENID; and Dyaa Abdou, Director of Sustainable Agricultural Development Programme - ENID"
 ---
+
 Within the reality of the Egyptian economy, the link between sustainable agricultural and rural development, enhancing food security, and reducing poverty is a central issue for achieving economic and social development. In Egypt, agriculture is recognized not only as a way of life and as crucial for national socio-economic development, but also as an engine for growth. 
 <!-- more -->
 

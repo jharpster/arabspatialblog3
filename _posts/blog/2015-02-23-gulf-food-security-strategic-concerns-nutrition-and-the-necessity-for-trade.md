@@ -1,10 +1,13 @@
 ---
 layout: blog
 published: true
-title: "Gulf Food Security: Strategic Concerns"
+title: "Gulf Food Security: Strategic Concerns, Nutrition and the Necessity for Trade"
 category: blog
 language: english
 comments: true
+splash: "https://farm9.staticflickr.com/8673/16440773208_4d6b416089_m.jpg"
+author: 
+  - "Eckart Woertz, Senior Research Fellow - The Barcelona Centre for International Affairs (CIDOB)"
 tags: 
   - import food dependency
   - land grabs
@@ -13,12 +16,8 @@ tags:
   - export restrictions
   - food price spikes
   - food self sufficiency
-author: Eckart Woertz, Senior Research Fellow
-affiliation: "Barcelona Centre (CIDOB)"
-splash: 
-youtubeid: 
-commit_message: commit message
 ---
+
 **1970s**: Oil and wheat are strategic commodities, their prices are skyrocketing, Arab countries declare an oil boycott against the US and the US contemplates to retaliate with a grain embargo. Gulf countries are alarmed and look into a plan to develop Sudan as an Arab breadbasket. 
 <!-- more -->
 
@@ -32,7 +31,7 @@ Neither domestic self-sufficiency nor foreign investment will be able to guarant
 
 Asian food trading houses like Noble, Olam and Wilmar have seen dramatic growth over the past decade and are competing with established traders in the West like ADM, Bunge, Cargill, Dreyfus and Glencore. The Middle East and North Africa (MENA) is the largest net importer of cereals, sugar and poultry in the world. It would not come as a surprise if countries in the region launched similar trading initiatives in the future. They would gain by pooling their interests to have more market power and trading options. Egypt wants to establish a [grain-trading hub](http://www.egyptembassy.net/news/new-logistic-center-for-cereals-and-grains-trade-located-in-damietta/) in Damietta close to the mouth of the Suez Canal. The Gulf countries have invested in food trader Glencore, and the UAE has launched a bespoke commodity-trading house, Abu Dhabi Sources.
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+If food security is not about food self-sufficiency it is not about mere calorie provision either. Sufficient supplies of micro-nutrients like vitamins and iron are essential for a balanced diet as an [IFPRI report](http://www.ifpri.org/sites/default/files/publications/pr25.pdf) has highlighted. Stunting among children in the Gulf though not as prevalent as in other MENA countries, is not absent either with prevalence rates ranging between 4 and 9 percent. Gulf countries face a challenge of too many calories, not the lack thereof. Their obesity and diabetes rates are among the highest in the world and their governments increasingly undertake nutrition interventions such as awareness campaigns and provide balanced school meals. In the future more may be done to tackle this growing challenge. Currently, taxing fast food and soft drinks is being debated in many OECD countries that are also affected by the obesity and diabetes epidemics. 
 
 At the end of the day, Gulf food security will encompass a multilayered framework that includes; the reduction of domestic agricultural production and improvements in water efficiency, the implementation of strategic storage and trading strategies and steps to safeguard nutrition security. Foreign agricultural investments might also have a role to play, but only if project designs are reconsidered. A real estate centered mentality that aims at formal land ownership, plantation cultivation and privileged bilateral access to food production should be given up. Instead, joint equity projects that bring the local population on board whilst at the same time address their environmental challenges and their socio-economic needs might offer avenues for beneficial cooperation.
 
