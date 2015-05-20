@@ -6,7 +6,7 @@ category: blog
 language: english
 comments: true
 tags: 
-  - R&D
+  - "R&D"
   - agricultural productivity
   - food prices
   - ASTI
@@ -14,11 +14,12 @@ tags:
   - Jordan
   - Lebanon
 author: "Gert-Jan Stads, Senior Program Manager - Agricultural Science and Technology Indicators (ASTI)"
-affiliation: 
-splash: "https://farm8.staticflickr.com/7789/17907967871_b51b7e1e50_m.jpg"
-youtubeid: 
+affiliation: null
+splash: "https://farm8.staticflickr.com/7789/17907967871_0dd6ccc01b_o.png"
+youtubeid: null
 commit_message: commit message
 ---
+
 Throughout the Arab world, agricultural R&D was not a political priority for decades, but when food prices rose to record highs in 2008, governments realized they could no longer neglect agricultural investment, and started looking at ways to enhance agricultural productivity.
 <!-- more -->
 
