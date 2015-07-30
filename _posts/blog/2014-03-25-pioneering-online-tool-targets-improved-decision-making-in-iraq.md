@@ -13,7 +13,7 @@ tags:
   - food security
 author: IFPRI
 affiliation: 
-splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/iraqspatial240.png"
+splash: "https://farm1.staticflickr.com/482/19167057010_84a2c27b1a_o.png"
 youtubeid: 
 commit_message: commit message
 header: "Iraq Spatial provides over 200 indicators, including macroeconomic, sectoral, climate, biophysical, and socioeconomic data at the national, subnational, and pixel level"

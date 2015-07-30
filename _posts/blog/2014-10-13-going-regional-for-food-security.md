@@ -5,14 +5,15 @@ title: Going Regional for Food Security
 category: blog
 language: english
 comments: true
-author: 
-  - "Nadim Khouri, Deputy Executive Secretary – UN ESCWA"
 tags: 
   - regional
   - subsidiarity
-splash: "https://farm6.staticflickr.com/5607/15361010140_e3ee417db3.jpg"
+author: "Nadim Khouri, Deputy Executive Secretary – UN ESCWA"
+affiliation: 
+splash: "https://farm6.staticflickr.com/5463/18655849788_4a8ecd73f8_m.jpg"
+youtubeid: 
+commit_message: commit message
 ---
-
 Subsidiarity. Subsidiarity is the principle that allocates decision-making responsibilities to the individuals or entities that are primarily affected by these decisions.  Decisions are only “bumped up” to the larger community level, territorial level, national level, regional, or even global level, if they cannot be dealt with at the lower level of aggregation…why is this important for food security in the Arab Region?  Because priority issues of food insecurity can only be addressed through a regional approach.
 
 <!-- more -->

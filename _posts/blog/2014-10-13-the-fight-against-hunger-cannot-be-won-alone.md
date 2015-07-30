@@ -5,13 +5,14 @@ title: The Fight Against Hunger Cannot Be Won Alone
 category: blog
 language: english
 comments: true
-author: 
-  - "Gerda Verburg — CFS Chair and Ambassador of the Netherlands to the UN’s Rome-based Agencies"
 tags: 
   - MENA
-splash: "https://farm4.staticflickr.com/3939/15360210290_6cd83f7a3c_n.jpg"
+author: "Gerda Verburg — CFS Chair and Ambassador of the Netherlands to the UN’s Rome-based Agencies"
+affiliation: 
+splash: "https://farm6.staticflickr.com/5456/18836605972_58e8809718_m.jpg"
+youtubeid: 
+commit_message: commit message
 ---
-
 With 805 million people worldwide estimated to be chronically hungry in 2012-2014, food insecurity and malnutrition in the world remains everybody’s problem. Gathering stakeholders to work together at national and regional levels can offer opportunities for the Near East region to go further in its fight against hunger.
 
 <!-- more -->

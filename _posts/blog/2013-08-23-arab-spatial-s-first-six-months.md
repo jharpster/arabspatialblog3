@@ -3,20 +3,21 @@ layout: blog
 published: true
 title: Arab Spatial’s First Six Months
 category: blog
-comments: true
 language: english
-splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/ArabSpatial_tn2.jpg"
-header: "IFPRI Senior Research Analyst Perrihan Al-Riffai discusses the progress and promise of Arab Spatial, an open-access database and interactive mapping tool she helped design that houses and geographically displays data on more than 150 indicators of development in the Middle East and North Africa."
+comments: true
 tags: 
   - Middle East and North Africa
   - tools
   - database
   - open access
   - food security
-author: 
-  - IFPRI
+author: IFPRI
+affiliation: 
+splash: "https://farm1.staticflickr.com/427/19358694701_4096d49121_o.jpg"
+youtubeid: 
+commit_message: commit message
+header: "IFPRI Senior Research Analyst Perrihan Al-Riffai discusses the progress and promise of Arab Spatial, an open-access database and interactive mapping tool she helped design that houses and geographically displays data on more than 150 indicators of development in the Middle East and North Africa."
 ---
-
 _Cross-posted from [IFPRI website](http://www.ifpri.org/blog/arab-spatial-s-first-six-months)_
 
 _IFPRI Senior Research Analyst [Perrihan Al-Riffai](http://www.ifpri.org/staffprofile/perrihan-al-riffai) discusses the progress and promise of Arab Spatial, an open-access database and interactive mapping tool she helped design that houses and geographically displays data on more than 150 indicators of development in the Middle East and North Africa._

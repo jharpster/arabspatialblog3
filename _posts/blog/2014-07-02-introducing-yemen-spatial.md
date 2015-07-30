@@ -1,22 +1,23 @@
 ---
 layout: blog
-category: blog
 published: true
 title: Introducing Yemen Spatial
-comments: false
-splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/yemenspatial_240.png"
-header: A tool to help the country reach its food security goals
+category: blog
 language: english
+comments: false
 tags: 
   - Yemen
   - tools
   - database
   - open access
   - food security
-author: 
-  - Jean Francois Trinh Tan
+author: Jean Francois Trinh Tan
+affiliation: 
+splash: "https://farm1.staticflickr.com/331/19167057000_bf9ccd68c7_o.png"
+youtubeid: 
+commit_message: commit message
+header: A tool to help the country reach its food security goals
 ---
-
 _Cross-posted from [IFPRI Website](http://www.ifpri.org/blog/introducing-yemen-spatial)_
 
 ##A tool to help the country reach its food security goals

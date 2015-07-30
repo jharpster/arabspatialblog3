@@ -10,7 +10,7 @@ tags:
   - food security
 author: IFPRI
 affiliation: 
-splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/arabfs_small.jpg"
+splash: "https://farm1.staticflickr.com/353/18734051053_7cc86ef338_o.jpg"
 youtubeid: 
 commit_message: commit message
 header: "In the aftermath of the “Arab Spring”—a series of demonstrations, protests, and wars that swept through the Arab world during 2010-2011 and toppled several governments in the region—many researchers identified rising food prices and the resulting food insecurity as underlying causes. "

@@ -3,20 +3,21 @@ layout: blog
 published: true
 title: A User’s Experience with Arab Spatial
 category: blog
-comments: true
 language: english
-splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/arabspatial_2_240.jpg"
-header: "Shahira Emara, GDNet Knowledge Services Manager in the Global Development Network’s Cairo office, shared her thoughts on the new Arab Spatial tool."
+comments: true
 tags: 
   - Middle East and North Africa
   - tools
   - database
   - open access
   - food security
-author: 
-  - Sarah Immenschuh Brawner
+author: Sarah Immenschuh Brawner
+affiliation: 
+splash: "https://farm1.staticflickr.com/509/18732160344_e966f62f3c_o.jpg"
+youtubeid: 
+commit_message: commit message
+header: "Shahira Emara, GDNet Knowledge Services Manager in the Global Development Network’s Cairo office, shared her thoughts on the new Arab Spatial tool."
 ---
-
 [_Cross-posted from IFPRI Website_](http://www.ifpri.org/blog/user-s-experience-arab-spatial)
 
 _Shahira Emara, GDNet Knowledge Services Manager in the Global Development Network’s Cairo office, shared her thoughts on the new Arab Spatial tool._

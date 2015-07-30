@@ -3,18 +3,19 @@ layout: blog
 published: true
 title: Food Security and the Arab Awakening
 category: blog
-comments: true
 language: english
-splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/Farmer%20Egypt.jpg"
-header: "The roots of the “Arab Awakening” run deep. Several factors—political, economic, and sociological—led to the popular uprisings that erupted throughout the Middle East and Northern Africa this decade. Key among these factors was high and volatile food prices."
+comments: true
 tags: 
   - food security
   - conflict
   - Middle East and North Africa
-author: 
-  - IFPRI
+author: IFPRI
+affiliation: 
+splash: "https://farm1.staticflickr.com/495/19358694541_e966f62f3c_o.jpg"
+youtubeid: 
+commit_message: commit message
+header: "The roots of the “Arab Awakening” run deep. Several factors—political, economic, and sociological—led to the popular uprisings that erupted throughout the Middle East and Northern Africa this decade. Key among these factors was high and volatile food prices."
 ---
-
 ## IFPRI Experts Discuss Food Security-Conflict Link
 
 _Cross-posted from [IFPRI Website](http://www.ifpri.org/blog/food-security-and-arab-awakening)_

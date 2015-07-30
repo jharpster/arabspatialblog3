@@ -3,20 +3,21 @@ layout: blog
 published: true
 title: Connecting the Dots
 category: blog
-comments: true
 language: english
-splash: "http://www.ifpri.org/sites/default/files/imagecache/prefab_large/arabspatialssprezi4_240.jpg"
-header: "Improving food security and enhancing economic development in developing countries requires a multifaceted approach—and that includes access to reliable data. "
+comments: true
 tags: 
   - Middle East and North Africa
   - tools
   - database
   - open access
   - food security
-author: 
-  - IFPRI
+author: IFPRI
+affiliation: 
+splash: "https://farm1.staticflickr.com/283/18732160214_ca0df85299_o.jpg"
+youtubeid: 
+commit_message: commit message
+header: "Improving food security and enhancing economic development in developing countries requires a multifaceted approach—and that includes access to reliable data. "
 ---
-
 _Cross-posted from [IFPRI Website](http://www.ifpri.org/blog/connecting-dots-mapping-development-middle-east-and-north-africa-updated-arab-spatial)_
 
 ## Mapping Development in the Middle East and North Africa with Updated Arab Spatial

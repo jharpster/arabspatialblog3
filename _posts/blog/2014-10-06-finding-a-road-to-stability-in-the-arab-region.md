@@ -5,11 +5,14 @@ title: Finding a Road to Stability in the Arab Region
 category: blog
 language: english
 comments: true
-author: 
-  - "Mahmoud Solh, Director General - ICARDA"
-splash: "https://farm6.staticflickr.com/5603/15352100917_4135f2a981_n.jpg"
----
+tags: 
 
+author: "Mahmoud Solh, Director General - ICARDA"
+affiliation: 
+splash: "https://farm4.staticflickr.com/3901/18657580279_f702697330_m.jpg"
+youtubeid: 
+commit_message: commit message
+---
 The string of upheavals in the Arab region in the past three years has been a culmination of several factors, but it’s hard to ignore some hard-hitting facts on the status of food security and unemployment in the region – perhaps even suggestive of a crisis that had been simmering for a while. 
 
 <!-- more -->

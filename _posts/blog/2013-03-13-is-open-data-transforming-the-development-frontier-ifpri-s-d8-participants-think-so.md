@@ -1,6 +1,6 @@
 ---
 layout: blog
-published: true
+published: false
 title: Is Open Data Transforming the Development Frontier? IFPRI’s “D8” Participants Think So
 category: blog
 language: english
